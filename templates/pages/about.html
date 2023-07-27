@@ -1,0 +1,65 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Hakkımızda - Uzman Yangın{% endblock title %}
+{% block description %}Uzman Yangın 2012 Yılında kurulmuş olup Türkiye'nin yangın malzemeri ve ekipmanları tedarikçisidir.{% endblock description %}
+{% block content %}
+
+    <!-- Page Header Start -->
+    <div class="container-fluid bg-dark p-5">
+        <div class="row">
+            <div class="col-12 text-center">
+                <h1 class="display-4 text-white">Hakkımızda</h1>
+                <a href="{% url 'index' %}">Ana Sayfa</a>
+                <i class="far fa-square text-primary px-2"></i>
+                <a href="">Hakkımızda</a>
+            </div>
+        </div>
+    </div>
+    <!-- Page Header End -->
+    <!-- About Start -->
+    <div class="container-fluid bg-secondary p-0">
+        <div class="row g-0">
+            <div class="col-lg-6 py-6 px-5">
+                <h1 class="display-5 mb-4">Uzman Yangına <span class="text-primary">Hoşgeldiniz</span></h1>
+                <h4 class="text-primary mb-4">Türkiye'nin En Güvenilir Yangın Ekipmanları Tedarikçisi</h4>
+                <p class="mb-4">Bizler yangın ekipmanları sektöründe, ulaşılabilir ürünler dışında, daha yenilikçi çözümler ile yeni projelere hayat vermek amacı ile yolumuza devam ediyoruz. 
+                    Yangın malzemeleri, yangın söndürme cihazları, yangın merdivenleri, yangın vana sistemleri, su depoları vb. ürün satış montaj ve projelendirme aynı zamanda yangın eğitimleri veren uzman yangın size bir telefon kadar yakındayız.</p>
+                <a href="" class="btn btn-primary py-md-3 px-md-5 rounded-pill">Hakkımızda</a>
+            </div>
+            <div class="col-lg-6">
+                <div class="h-100 d-flex flex-column justify-content-center bg-primary p-5">
+                    <div class="d-flex text-white mb-5">
+                        <div class="d-flex flex-shrink-0 align-items-center justify-content-center bg-white text-primary rounded-circle mx-auto mb-4" style="width: 60px; height: 60px;">
+                            <i class="fa fa-home" aria-hidden="true"></i>
+                        </div>
+                        <div class="ps-4">
+                            <h3>Evinizi Yangından Koruyun</h3>
+                            <p class="mb-0">Doğal afetler arasında yer alan yangın; yapıların tesisatından ya da dikkatsizlikten kaynaklı meydana gelebilir. Hem maddi hem de manevi zarara neden olabilen yangınlardan korunmak için atacağınız adımlar ise hasarları en aza indirme konusunda size yardımcı olabilir.</p>
+                        </div>
+                    </div>
+                    <div class="d-flex text-white mb-5">
+                        <div class="d-flex flex-shrink-0 align-items-center justify-content-center bg-white text-primary rounded-circle mx-auto mb-4" style="width: 60px; height: 60px;">
+                            <i class="fa fa-car" aria-hidden="true"></i>
+                        </div>
+                        <div class="ps-4">
+                            <h3>Aracınız Bize Emanet</h3>
+                            <p class="mb-0">Araçlarınız sıcak havalarda ve bakımlarının zamanında yapılmamasından dolayı yangın ihtimaliyle karşı karşıyadır. Araçlarınız için yangın söndürme tüpleri sizi koruyacaktır. Araçlarınızın yangından korumak için bizi arayabilirsiniz.</p>
+                        </div>
+                    </div>
+                    <div class="d-flex text-white">
+                        <div class="d-flex flex-shrink-0 align-items-center justify-content-center bg-white text-primary rounded-circle mx-auto mb-4" style="width: 60px; height: 60px;">
+                            <i class="fa fa-globe" aria-hidden="true"></i>
+
+                        </div>
+                        <div class="ps-4">
+                            <h3>İş Yerinizde Önce Emniyet Alın</h3>
+                            <p class="mb-0">İş yerinizi yangın tehlikesinden koruyan, estetik görünüme sahip bir yangın algılama sistemine sahip olmak isterseniz Kablosuz Duman Dedektörü ilginizi çekebilir. Bu duman dedektörü, evinizde karşılaşabileceğiniz her türlü yangın tehlikesine karşı sizi güçlü bir şekilde uyarır. Kurulum ve kullanım kolaylığı sebebiyle tercih ediliyor. Tehlike halinde Merkezi Gözlem İstasyonu, bilgilendirme ve gerekli yönlendirmeleri yapma konusunda size 7/24 destek sağlıyor.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- About End -->
+    {% include 'particial/_about.html' %}
+{% endblock content %}

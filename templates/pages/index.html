@@ -1,0 +1,171 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Uzman Yangın | Yangın Malzemeleri ve Ekipmanları Tedarikçisi {% endblock title %}
+{% block description %}Yangın malzemeleri ve yangın ekipmanları satış ve tedarik, kurulum, projelendirme, teknik destek, yangın eğitimi, yangın danışmanlık hizmetleri.{% endblock description %}
+{% block content %}
+
+    <!-- Carousel Start -->
+    <div class="container-fluid p-0">
+        <div id="header-carousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img class="w-100" src="{% static 'img/carousel-1.jpg' %}" alt="Image">
+                    <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
+                        <div class="p-3" style="max-width: 900px;">
+                            <h5 class="text-white text-uppercase">Yangından Korumak Bizim İşimiz</h5>
+                            <h1 class="display-1 text-white mb-md-4">Yangın Ekipmanları ve Yangın Malzemeleri</h1>
+                            <a href="{% url 'products' %}" class="btn btn-primary py-md-3 px-md-5 me-3 rounded-pill">Ürünler</a>
+                            <a href="{% url 'contact' %}" class="btn btn-secondary py-md-3 px-md-5 rounded-pill">İletişim</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img class="w-100" src="{% static 'img/carousel-2.jpg' %}" alt="Image">
+                    <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
+                        <div class="p-3" style="max-width: 900px;">
+                            <h5 class="text-white text-uppercase">Yangın öncesinde Önleminizi Alın</h5>
+                            <h1 class="display-1 text-white mb-md-4">Satış, Montaj ve Periyodik Bakım</h1>
+                            <a href="{% url 'products' %}" class="btn btn-primary py-md-3 px-md-5 me-3 rounded-pill">Ürünler</a>
+                            <a href="{% url 'contact' %}" class="btn btn-secondary py-md-3 px-md-5 rounded-pill">İletişim</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img class="w-100" src="{% static 'img/carousel-3.jpg' %}" alt="Image">
+                    <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
+                        <div class="p-3" style="max-width: 900px;">
+                            <h5 class="text-white text-uppercase">Eğitim ve Danışmanlık</h5>
+                            <h1 class="display-1 text-white mb-md-4">Yangın Eğitimleri ve Danışmanlık Hizmetleri</h1>
+                            <a href="{% url 'products' %}" class="btn btn-primary py-md-3 px-md-5 me-3 rounded-pill">Ürünler</a>
+                            <a href="{% url 'contact' %}" class="btn btn-secondary py-md-3 px-md-5 rounded-pill">İletişim</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img class="w-100" src="{% static 'img/carousel-4.jpg' %}" alt="Image">
+                    <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
+                        <div class="p-3" style="max-width: 900px;">
+                            <h5 class="text-white text-uppercase">Yangına Müdahalede Neler Giyilmeli</h5>
+                            <h1 class="display-1 text-white mb-md-4">Kişisel Koruyucu Yangın Ekipmanları</h1>
+                            <a href="{% url 'products' %}" class="btn btn-primary py-md-3 px-md-5 me-3 rounded-pill">Ürünler</a>
+                            <a href="{% url 'contact' %}" class="btn btn-secondary py-md-3 px-md-5 rounded-pill">İletişim</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#header-carousel"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Geri</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#header-carousel"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">İleri</span>
+            </button>
+        </div>
+    </div>
+    <!-- Carousel End -->
+
+
+    <!-- About Start -->
+    <div class="container-fluid bg-secondary p-0">
+        <div class="row g-0">
+            <div class="col-lg-6 py-6 px-5">
+                <h1 class="display-5 mb-4">Uzman Yangın'a<span class="text-primary"> Hoşgeldiniz</span></h1>
+                <h4 class="text-primary mb-4">Türkiye'nin En Güvenilir Yangın Ekipmanları Tedarikçisi</h4>
+                <p class="mb-4">Bizler yangın ekipmanları sektöründe, ulaşılabilir ürünler dışında, daha yenilikçi çözümler ile yeni projelere hayat vermek amacı ile yolumuza devam ediyoruz. 
+                    Yangın malzemeleri, yangın söndürme cihazları, yangın merdivenleri, yangın vana sistemleri, su depoları vb. ürün satış montaj ve projelendirme aynı zamanda yangın eğitimleri veren uzman yangın size bir telefon kadar yakındayız.</p>
+                <a href="" class="btn btn-primary py-md-3 px-md-5 rounded-pill">Hakkımızda</a>
+            </div>
+            <div class="col-lg-6">
+                <div class="h-100 d-flex flex-column justify-content-center bg-primary p-5">
+                    <div class="d-flex text-white mb-5">
+                        <div class="d-flex flex-shrink-0 align-items-center justify-content-center bg-white text-primary rounded-circle mx-auto mb-4" style="width: 60px; height: 60px;">
+                            <i class="fa fa-home" aria-hidden="true"></i>
+                        </div>
+                        <div class="ps-4">
+                            <h3>Yangından Korunmanın Yolları</h3>
+                            <p class="mb-0">Doğal afetler arasında yer alan yangın; yapıların tesisatından ya da dikkatsizlikten kaynaklı meydana gelebilir. Hem maddi hem de manevi zarara neden olabilen yangınlardan korunmak için atacağınız adımlar ise hasarları en aza indirme konusunda size yardımcı olabilir.</p>
+                        </div>
+                    </div>
+                    <div class="d-flex text-white mb-5">
+                        <div class="d-flex flex-shrink-0 align-items-center justify-content-center bg-white text-primary rounded-circle mx-auto mb-4" style="width: 60px; height: 60px;">
+                            <i class="fa fa-car" aria-hidden="true"></i>
+                        </div>
+                        <div class="ps-4">
+                            <h3>Aracınız Bize Emanet</h3>
+                            <p class="mb-0">Araçlarınız sıcak havalarda ve bakımlarının zamanında yapılmamasından dolayı yangın ihtimaliyle karşı karşıyadır. Araçlarınız için yangın söndürme tüpleri sizi koruyacaktır. Araçlarınızın yangından korumak için bizi arayabilirsiniz.</p>
+                        </div>
+                    </div>
+                    <div class="d-flex text-white">
+                        <div class="d-flex flex-shrink-0 align-items-center justify-content-center bg-white text-primary rounded-circle mx-auto mb-4" style="width: 60px; height: 60px;">
+                            <i class="fa fa-globe" aria-hidden="true"></i>
+
+                        </div>
+                        <div class="ps-4">
+                            <h3>İş Yerinizde Önce Emniyet Alın</h3>
+                            <p class="mb-0">İş yerinizi yangın tehlikesinden koruyan, estetik görünüme sahip bir yangın algılama sistemine sahip olmak isterseniz Kablosuz Duman Dedektörü ilginizi çekebilir. Bu duman dedektörü, evinizde karşılaşabileceğiniz her türlü yangın tehlikesine karşı sizi güçlü bir şekilde uyarır. Kurulum ve kullanım kolaylığı sebebiyle tercih ediliyor. Tehlike halinde Merkezi Gözlem İstasyonu, bilgilendirme ve gerekli yönlendirmeleri yapma konusunda size 7/24 destek sağlıyor.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- About End -->
+    
+    <!-- Services Start -->
+    <div class="container-fluid pt-6 px-5">
+        <div class="text-center mx-auto mb-5" style="max-width: 600px;">
+            <h1 class="display-5 mb-0">Neler Yapıyoruz?</h1>
+            <hr class="w-25 mx-auto bg-primary">
+        </div>
+        <div class="row g-5">
+            {% for services in services  %}
+            <div class="col-lg-3 col-md-6">
+                <div class="service-item bg-secondary text-center px-5">
+                    <div class="d-flex align-items-center justify-content-center bg-primary text-white rounded-circle mx-auto mb-4" style="width: 90px; height: 90px;">
+                        <img class="w-100" src="{{services.image.url}}" alt="{{services.title}}">
+                    </div>
+                    <a href={% url 'product_by_category' services.category.slug %}><h3 class="mb-3">{{services.title|title}}</h3></a>
+                    <p class="mb-0">{{services.description}}</p>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+    <!-- Services End -->
+
+    <div class="container-fluid py-4 px-3">
+        <div class="row g-5">
+            <div class="col-lg-12">
+               <!-- Blog Start -->
+                <div class="container-fluid py-4 px-3">
+                <div class="text-center mx-auto mb-5" style="max-width: 600px;">
+                <h1 class="display-5 mb-0">Bazı Ürünlerimiz</h1>
+                <hr class="w-25 mx-auto bg-primary">
+                </div>
+                <div class="row g-5">
+                {% for products in products  %}
+                <div class="col-lg-3">
+                    <div class="blog-item">
+                        <div class="position-relative overflow-hidden">
+                            <img class="img-fluid" src="{{products.image.url}}" alt="">
+                        </div>
+                        <div class="bg-secondary d-flex">
+                            <div class="d-flex flex-column justify-content-center py-3 px-4">
+                                <a class="h4" href="{% url 'product_detail' products.slug %}"><i class="bi bi-arrow-right text-primary me-2"></i>{{products.title|title}}</a>
+                                <p>{{products.description}}</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+        <!-- Blog End -->
+    </div>
+    
+    {% include 'particial/_about.html' %}
+</div>
+{% endblock content %}

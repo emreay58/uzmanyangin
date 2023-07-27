@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Uzman Yangın | Yangın Malzemeleri ve Ekipmanları Tedarikçisi {% endblock title %}
+{% block description %}Yangın malzemeleri ve yangın ekipmanları satış ve tedarik, kurulum, projelendirme, teknik destek, yangın eğitimi, yangın danışmanlık hizmetleri.{% endblock description %}
+
+{% block content %}
+   <!-- Page Header Start -->
+   <div class="container-fluid bg-dark p-5">
+    <div class="row">
+        <div class="col-12 text-center">
+            <h1 class="display-4 text-white">HİZMETLER</h1>
+            <a href="{% url 'index' %}">Ana Sayfa</a>
+            <i class="far fa-square text-primary px-2"></i>
+            <a href="">Hizmetler</a>
+        </div>
+    </div>
+</div>
+<!-- Page Header End -->
+
+
+<!-- Services Start -->
+<div class="container-fluid py-6 px-5">
+    <div class="text-center mx-auto mb-5" style="max-width: 600px;">
+        <h1 class="display-5 mb-0">Neler Yapıyoruz?</h1>
+        <hr class="w-25 mx-auto bg-primary">
+    </div>
+    <div class="row g-5">
+        {% for services in services %}
+        <div class="col-lg-4 col-md-6">
+            <div class="service-item bg-secondary text-center px-5">
+                <div class="d-flex align-items-center justify-content-center bg-primary text-white rounded-circle mx-auto mb-4" style="width: 90px; height: 90px;">
+                        <img class="w-100" src="{{services.image.url}}" alt="{{services.title|title}}">
+                </div>
+                <a href="{% url 'product_by_category' services.category.slug %}"><h3 class="mb-3">{{services.title|title}}</h3></a>
+                <p class="mb-0">{{services.description}}</p>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+<!-- Services End -->
+
+
+{% endblock content %}

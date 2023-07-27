@@ -1,0 +1,104 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Uzman Yangın | Yangın Malzemeleri ve Ekipmanları Tedarikçisi {% endblock title %}
+{% block description %}Yangın malzemeleri ve yangın ekipmanları satış ve tedarik, kurulum, projelendirme, teknik destek, yangın eğitimi, yangın danışmanlık hizmetleri.{% endblock description %}
+
+{% block content %}
+    <!-- Page Header Start -->
+    <div class="container-fluid bg-dark p-5">
+        <div class="row">
+            <div class="col-12 text-center">
+                <h1 class="display-4 text-white">Ürünler</h1>
+                <a href="{% url 'index' %}">Ana Sayfa</a>
+                <i class="far fa-square text-primary px-2"></i>
+                <a href="">Ürünler</a>
+            </div>
+        </div>
+    </div>
+    <!-- Page Header End -->
+<!-- product Start -->
+<div class="container-fluid py-4 px-3">
+    <div class="row g-5">
+        <div class="col-lg-9">
+           <!-- Blog Start -->
+            <div class="container-fluid py-4 px-3">
+            <div class="text-center mx-auto mb-5" style="max-width: 600px;">
+            <h1 class="display-5 mb-0">Ürünler</h1>
+            <hr class="w-25 mx-auto bg-primary">
+            </div>
+            <div class="row g-5">
+            {% for products in products  %}
+            <div class="col-lg-4">
+                <div class="blog-item">
+                    <div class="position-relative overflow-hidden">
+                        <img class="img-fluid" src="{{products.image.url}}" alt="">
+                    </div>
+                    <div class="bg-secondary d-flex">
+                        <div class="d-flex flex-column justify-content-center py-3 px-4">
+                            <a class="h4" href="{% url 'product_detail' products.slug %}"><i class="bi bi-arrow-right text-primary me-2"></i>{{products.title|title}}</a>
+                            <p>{{products.description}}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+    <!-- Blog End -->
+</div>
+
+<!-- Sidebar Start -->
+<div class="col-lg-3">
+            <!-- Search Form Start -->
+            <div class="mb-5">
+                <div class="input-group">
+                    <input type="text" class="form-control p-3" placeholder="Ara...">
+                    <button class="btn btn-primary px-4"><i class="bi bi-search"></i></button>
+                </div>
+            </div>
+            <!-- Search Form End -->
+
+            <!-- Category Start -->
+            <div class="mb-5">
+                <h2 class="mb-4">Kategoriler</h2>
+                <div class="d-flex flex-column justify-content-start bg-secondary p-4">
+                    {% for category in category %}
+                    {% if request.path == "{{category.slug}}" %}
+                    <a class="h5 mb-3 text-primary" href="{% url 'product_by_category' category.slug %}"><i class="bi bi-arrow-right text-primary me-2"></i>{{category.name|title}}</a>
+                    {% else %}
+                    <a class="h5 mb-3" href="{% url 'product_by_category' category.slug %}"><i class="bi bi-arrow-right text-primary me-2"></i>{{category.name|title}}</a>
+                    {% endif %}
+                    {% endfor %}
+                </div>
+            </div>
+            <!-- Category End -->
+                <!-- Tags Start -->
+                <div class="mb-5">
+                    <h2 class="mb-4">Etiketler</h2>
+                    <div class="d-flex flex-wrap m-n1">
+                        {% for tag in tag  %}
+                        <a href="{% url 'product_by_tag' tag.slug %}" class="btn btn-secondary m-1">{{tag.name|title}}</a>
+                        {% endfor %}
+                    </div>
+                </div>
+                <!-- Tags End -->
+                    <!-- Recent Post Start -->
+                    <div class="mb-5">
+                        <h2 class="mb-4">Faaliyetler</h2>
+                        {% for faaliyets in faaliyets  %}
+                        <div class="d-flex mb-3">
+                       
+                            <a href="{% url 'product_by_faaliyet' faaliyets.slug %}" class="h5 d-flex align-items-center bg-secondary px-3 mb-0">{{faaliyets.title|title}}
+                            </a>
+                           
+                        </div>
+                        {% endfor %}
+                    </div>
+                    <!-- Recent Post End -->
+        </div>
+        <!-- Sidebar End -->
+    </div>
+</div>
+<!-- Blog End -->
+
+{% endblock content %}

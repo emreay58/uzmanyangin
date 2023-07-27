@@ -1,0 +1,57 @@
+    {% load static %}
+    <!-- Topbar Start -->
+    <div class="container-fluid bg-secondary ps-5 pe-0 d-none d-lg-block">
+        <div class="row gx-0">
+            <div class="col-md-6 text-center text-lg-start mb-2 mb-lg-0">
+                <div class="d-inline-flex align-items-center">
+                    <a class="text-body py-2 pe-3 border-end" href=""><small>Servis</small></a>
+                    <a class="text-body py-2 px-3 border-end" href=""><small>Bakım</small></a>
+                    <a class="text-body py-2 px-3 border-end" href=""><small>Eğitim</small></a>
+                    <a class="text-body py-2 px-3 border-end" href=""><small>Danışmanlık</small></a>
+                    <a class="text-body py-2 ps-3" href=""><small>Tedarik</small></a>
+                </div>
+            </div>
+            <div class="col-md-6 text-center text-lg-end">
+                <div class="position-relative d-inline-flex align-items-center bg-primary text-white top-shape px-5">
+                    <div class="me-3 pe-3 border-end py-2">
+                        <p class="m-0"><i class="fa fa-envelope-open me-2"></i>info@uzmanyangin.com.tr</p>
+                    </div>
+                    <div class="py-2">
+                        <p class="m-0"><i class="fa fa-phone-alt me-2"></i>0 (216) 394 35 32</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Topbar End -->
+<!-- Navbar Start -->
+    <nav class="navbar navbar-expand-lg bg-white navbar-light shadow-sm px-5 py-3 py-lg-0">
+        <a href="{% url 'index' %}" class="navbar-brand p-0">
+            <img class="w-75" src="{% static 'img/logo.png' %}" alt="{{services.title}}">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <div class="navbar-nav ms-auto py-0 me-n3">
+                {% if request.path == '/'  %}
+                <a href="{% url 'index' %}" class="nav-item nav-link active">Ana Sayfa</a>
+                {% else %}
+                <a href="{% url 'index' %}" class="nav-item nav-link">Ana Sayfa</a>
+                {% endif %}
+                {% if 'hizmetler' in request.path %}<a href="{% url 'services' %}" class="nav-item nav-link active">Hizmetler</a>
+                {% else %}<a href="{% url 'services' %}" class="nav-item nav-link">Hizmetler</a>
+                {% endif %}
+                {% if 'urunler' in request.path %}<a href="{% url 'products' %}" class="nav-item nav-link active">Ürünler</a>
+                {% else %}<a href="{% url 'products' %}" class="nav-item nav-link">Ürünler</a>
+                {% endif %}
+                {% if 'hakkimizda' in request.path %}<a href="{% url 'about' %}" class="nav-item nav-link active">Hakkımızda</a>
+                {% else %}<a href="{% url 'about' %}" class="nav-item nav-link">Hakkımızda</a>
+                {% endif %}
+                {% if 'iletisim' in request.path %}<a href="{% url 'contact' %}" class="nav-item nav-link active">İletişim</a>
+                {% else %}<a href="{% url 'contact' %}" class="nav-item nav-link">İletişim</a>
+                {% endif %}
+            </div>
+        </div>
+    </nav>
+    <!-- Navbar End -->
