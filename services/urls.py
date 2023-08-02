@@ -7,6 +7,6 @@ urlpatterns = [
     path('urunler/', views.ProductsView, name='products'),
     path('urunler/<slug:slug>/', views.Product_Detail_View, name='product_detail'),
     path('urunler/kategori/<slug:slug>/', views.product_by_category, name='product_by_category'),
-    path('etiket/<slug:slug>/', views.product_by_tag, name='product_by_tag'),
+    path('urunler/etiket/<slug:slug>/', views.product_by_tag, name='product_by_tag'),
     path('uzman_yangin/faaliyet/<slug:slug>/', views.product_by_faaliyet, name='product_by_faaliyet'),
 ]

@@ -31,7 +31,7 @@
                 <div class="d-flex align-items-center justify-content-center bg-primary text-white rounded-circle mx-auto mb-4" style="width: 90px; height: 90px;">
                         <img class="w-100" src="{{services.image.url}}" alt="{{services.title|title}}">
                 </div>
-                <a href="{% url 'product_by_category' services.category.slug %}"><h3 class="mb-3">{{services.title|title}}</h3></a>
+                <a href="{% url 'service_detail' services.slug %}"><h3 class="mb-3">{{services.title|title}}</h3></a>
                 <p class="mb-0">{{services.description}}</p>
             </div>
         </div>

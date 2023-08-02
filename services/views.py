@@ -15,15 +15,17 @@ def ServicesView(request):
 
 def Service_Detail_View(request, slug):
     service = Services.objects.get(slug=slug)
+    products = Product.objects.filter(category__slug=slug)
 
     context = {
-        'service' : service
+        'service' : service,
+        'products' : products
     }
     return render(request, 'services/service_detail.html', context)
 
 
 def ProductsView(request):
-    products = Product.objects.all()
+    products = Product.objects.filter(is_home=True)
     category = Category.objects.all()
     tag =Tag.objects.all()
     faaliyets = Faaliyet.objects.all()
@@ -39,11 +41,24 @@ def ProductsView(request):
 
 def Product_Detail_View(request, slug):
     product = Product.objects.get(slug=slug)
-
     context = {
         'product' : product
     }
     return render(request, 'services/product_detail.html', context)
+
+def search(request):
+    products = Product.objects.filter(name__contains = request.GET['search'])
+    category = Category.objects.all()
+    tag =Tag.objects.all()
+    faaliyets = Faaliyet.objects.all()
+    
+    context = {
+        'products' : products,
+        'category' : category,
+        'tag' : tag,
+        'faaliyets' : faaliyets
+    }
+    return render(request, 'services/products.html', context)
 
 
 def product_by_category(request, slug):

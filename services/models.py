@@ -21,7 +21,7 @@ class Tag(models.Model):
         return self.name
     
     def get_absolute_url(self):
-        return f'/etiket/{self.slug}/'
+        return f'/urunler/etiket/{self.slug}/'
 
 
 class Faaliyet(models.Model):

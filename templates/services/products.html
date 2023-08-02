@@ -11,7 +11,7 @@
                 <h1 class="display-4 text-white">Ürünler</h1>
                 <a href="{% url 'index' %}">Ana Sayfa</a>
                 <i class="far fa-square text-primary px-2"></i>
-                <a href="">Ürünler</a>
+                <a href="">Kategori</a>
             </div>
         </div>
     </div>
@@ -49,25 +49,12 @@
 
 <!-- Sidebar Start -->
 <div class="col-lg-3">
-            <!-- Search Form Start -->
-            <div class="mb-5">
-                <div class="input-group">
-                    <input type="text" class="form-control p-3" placeholder="Ara...">
-                    <button class="btn btn-primary px-4"><i class="bi bi-search"></i></button>
-                </div>
-            </div>
-            <!-- Search Form End -->
-
             <!-- Category Start -->
             <div class="mb-5">
                 <h2 class="mb-4">Kategoriler</h2>
                 <div class="d-flex flex-column justify-content-start bg-secondary p-4">
                     {% for category in category %}
-                    {% if request.path == "{{category.slug}}" %}
-                    <a class="h5 mb-3 text-primary" href="{% url 'product_by_category' category.slug %}"><i class="bi bi-arrow-right text-primary me-2"></i>{{category.name|title}}</a>
-                    {% else %}
                     <a class="h5 mb-3" href="{% url 'product_by_category' category.slug %}"><i class="bi bi-arrow-right text-primary me-2"></i>{{category.name|title}}</a>
-                    {% endif %}
                     {% endfor %}
                 </div>
             </div>
